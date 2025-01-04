@@ -1,0 +1,11 @@
+libft'deki libft.a'nın ana proje makefile'ı tarafından derlendiğinden emin ol
+
+proje dosyalarındaki headerlara dikkat et proje ev + 42'de yapılıyor
+
+4.01.25 -----> operasyonlar bitti, argüman kontrolü işlenmesi ve algo kaldı
+
+norm kontrollerini yapmayı ihmal etme
+
+Yorum satırlarını ingilizceye çevir (norm kontrol ederek)
+
+Mallocları freelemeyi unutma

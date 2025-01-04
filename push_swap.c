@@ -6,36 +6,29 @@
 /*   By: aldinc <aldinc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 14:22:07 by aldinc            #+#    #+#             */
-/*   Updated: 2025/01/03 20:06:31 by aldinc           ###   ########.fr       */
+/*   Updated: 2025/01/04 23:07:56 by aldinc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-//kontroller kaldı
-
-//algoritma kaldı
-
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	if (argc > 1)
-	{
-		char	**splitted;
-		char	*together;
-		int		c = argc;
-		int		i = 1;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
+	char	**split_nums;
+	int		*numbers;
 
-		if (argc == 2)
-			splitted = ft_split(argv[1], ' ');
-		if ((argc > 2))
-		{
-			while ((c > 2))
-			{
-				together = ft_strjoin(argv[i], argv[i+1]);
-				i++;
-				c--;
-			}
-			splitted = ft_split(together, ' ');
-		}
-	}
+	if (argc < 2)
+		return (0);
+	split_nums = process_input(argc, argv);
+	if (!split_nums)
+		return (1);
+	numbers = convert_to_int(split_nums);
+	free_split(split_nums); // Free string array after conversion
+	if (!numbers)
+		return (1);
+	// Run algorithm here
+	free(numbers);// Free after algorithm completes
+	return (0);
 }
